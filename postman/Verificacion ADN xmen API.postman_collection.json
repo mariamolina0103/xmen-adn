@@ -10,7 +10,7 @@
 		{
 			"name": "Estado de verificacion ADN",
 			"request": {
-				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/stats",
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/stats",
 				"method": "GET",
 				"header": [],
 				"body": {},
@@ -21,7 +21,7 @@
 		{
 			"name": "Mutante 1",
 			"request": {
-				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/mutant",
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/",
 				"method": "POST",
 				"header": [
 					{
@@ -32,7 +32,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"dna\":[\r\n\t\"ATGCGA\",\r\n\t\"CAGTGC\",\r\n\t\"TTGTGT\",\r\n\t\"AGGAGG\",\r\n\t\"CCCCTA\",\r\n\t\"TCACTG\"\r\n]\r\n}"
+					"raw": "{\r\n\"dna\":[\r\n\t\"AAAACT\",\r\n\t\"CAGTTC\",\r\n\t\"TTGTTT\",\r\n\t\"AGTTGG\",\r\n\t\"GTGCTA\",\r\n\t\"TCACTG\"\r\n]\r\n}"
 				},
 				"description": ""
 			},
@@ -41,7 +41,7 @@
 		{
 			"name": "Mutante 2",
 			"request": {
-				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/mutant",
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant",
 				"method": "POST",
 				"header": [
 					{
@@ -61,7 +61,7 @@
 		{
 			"name": "Mutante 3",
 			"request": {
-				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/mutant",
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant",
 				"method": "POST",
 				"header": [
 					{
@@ -81,7 +81,7 @@
 		{
 			"name": "No Mutante 1",
 			"request": {
-				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/mutant",
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant",
 				"method": "POST",
 				"header": [
 					{
@@ -101,7 +101,7 @@
 		{
 			"name": "No Mutante 2",
 			"request": {
-				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/mutant",
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant",
 				"method": "POST",
 				"header": [
 					{
@@ -121,7 +121,7 @@
 		{
 			"name": "No Mutante 3",
 			"request": {
-				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/mutant",
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant",
 				"method": "POST",
 				"header": [
 					{
@@ -141,7 +141,7 @@
 		{
 			"name": "ADN Nulo",
 			"request": {
-				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/mutant",
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant",
 				"method": "POST",
 				"header": [
 					{
@@ -161,7 +161,7 @@
 		{
 			"name": "AND Vacio",
 			"request": {
-				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/mutant",
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant",
 				"method": "POST",
 				"header": [
 					{
@@ -181,7 +181,7 @@
 		{
 			"name": "ADN Items iguales",
 			"request": {
-				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/mutant",
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant",
 				"method": "POST",
 				"header": [
 					{
@@ -201,7 +201,7 @@
 		{
 			"name": "ADN Longitudes diferentes",
 			"request": {
-				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/mutant",
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant",
 				"method": "POST",
 				"header": [
 					{
@@ -221,7 +221,7 @@
 		{
 			"name": "ADN longitud < permitido",
 			"request": {
-				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/mutant",
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant",
 				"method": "POST",
 				"header": [
 					{
@@ -241,7 +241,7 @@
 		{
 			"name": "ADN Con letras no permitidas",
 			"request": {
-				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/mutant",
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant",
 				"method": "POST",
 				"header": [
 					{

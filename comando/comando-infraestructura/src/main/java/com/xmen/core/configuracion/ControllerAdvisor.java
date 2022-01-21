@@ -18,19 +18,16 @@ public class ControllerAdvisor extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(ExcepcionMutante.class)
     public ResponseEntity<String> handleExcepcionMutante(ExcepcionMutante ex) {
-        LOGGER_ERROR.error(ex.getClass().getSimpleName(), ex);
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.ALREADY_REPORTED);
     }
 
     @ExceptionHandler(ExcepcionNoMutante.class)
     public ResponseEntity<String> handleExcepcionNoMutante(ExcepcionNoMutante ex) {
-        LOGGER_ERROR.error(ex.getClass().getSimpleName(), ex);
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.FORBIDDEN);
     }
 
     @ExceptionHandler(ExcepcionValidacionDatos.class)
     public ResponseEntity<String> handleExcepcionValidacionDatos(ExcepcionValidacionDatos ex) {
-        LOGGER_ERROR.error(ex.getClass().getSimpleName(), ex);
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
     }
 

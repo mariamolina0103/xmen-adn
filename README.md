@@ -54,8 +54,8 @@ _**Cloud Computing AWS** : Elastic Beanstalk_
 
 ## Documentación📖
 
-Puedes encontrar mucho más sobre la API [Aquí](http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/swagger-ui/index.html?configUrl=/mutant/v3/api-docs/swagger-config)
-
+- Puedes encontrar mucho más sobre la API [Aquí](http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/swagger-ui.html)
+- Url del servicio: http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/stats
 ## Pruebas de la API📌
 
 Se pueden utilizar las colecciones de postman que se encuentran en la ruta principal del proyecto  [Aquí](https://github.com/mariamolina0103/xmen-adn/tree/master/postman)
