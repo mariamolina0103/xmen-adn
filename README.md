@@ -6,6 +6,7 @@ _Este proyecto permite detectar si un humano es mutante a partir de un ADN ingre
 ## Solución 🚀
 
 **![](https://lh3.googleusercontent.com/bTBERDMh8955Wxe9rmOXMYpOWkv6EZK-Uzs2kAqhVoRxOlbSDqOQXcd4k6ditvyjDJTHSPXIWU6rwm5X7TM932Nupj4ES1z4nC2jWD1FmM0mtJAvmMpWcfqvF10RItPKwoHp2w3o)**
+
 _Se podrá identificar que un humano es mutante si se encuentra más de una secuencia de cuatro letras iguales​, de forma oblicua, horizontal o vertical._
 
 La solución desarrollada consiste en recorrer la matriz de forma horizontal, vertical y diagonal construyendo cada una de las secuencias y validarlas con una expresión regular para saber si contiene cuatro letras iguales.
