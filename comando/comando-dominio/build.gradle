@@ -1,0 +1,10 @@
+dependencies {
+	implementation project.ext.springboottest
+	testImplementation project.ext.junit
+
+	compileOnly project.ext.lombok
+	annotationProcessor project.ext.lombok
+
+	testCompileOnly project.ext.lombok
+	testAnnotationProcessor project.ext.lombok
+}

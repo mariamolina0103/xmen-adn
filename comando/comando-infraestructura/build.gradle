@@ -1,0 +1,16 @@
+dependencies {
+	implementation project(':comando:comando-dominio')
+	implementation project(':comando:comando-aplicacion')
+
+	testCompileOnly project.ext.lombok
+	testAnnotationProcessor project.ext.lombok
+
+	implementation project.ext.springbootweb
+	implementation project.ext.openapi
+	implementation project.ext.springboottest
+	implementation project.ext.dynamodb
+	implementation project.ext.springdatadynamodb
+	implementation project.ext.modelmapper
+	implementation project.ext.lombok
+	testImplementation project.ext.junit
+}

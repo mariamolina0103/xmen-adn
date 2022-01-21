@@ -1,0 +1,262 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Verificacion ADN xmen API",
+		"_postman_id": "74e08bdb-fdcf-e880-4e88-e245122538b1",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Estado de verificacion ADN",
+			"request": {
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/stats",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Mutante 1",
+			"request": {
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/mutant",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"dna\":[\r\n\t\"ATGCGA\",\r\n\t\"CAGTGC\",\r\n\t\"TTGTGT\",\r\n\t\"AGGAGG\",\r\n\t\"CCCCTA\",\r\n\t\"TCACTG\"\r\n]\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Mutante 2",
+			"request": {
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/mutant",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"dna\":[\r\n\t\"ATGCGA\",\r\n\t\"CAGTAC\",\r\n\t\"TTAAGT\",\r\n\t\"AGAAGG\",\r\n\t\"CCACTA\",\r\n\t\"TCACTG\"\r\n\t]\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Mutante 3",
+			"request": {
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/mutant",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"dna\":[\r\n\t\"ATTTCA\",\r\n\t\"CAGTCC\",\r\n\t\"TTATCT\",\r\n\t\"AGAACG\",\r\n\t\"CCCCTA\",\r\n\t\"TCCCTG\"]\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "No Mutante 1",
+			"request": {
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/mutant",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"dna\":[\r\n\t\"CCGTGA\",\r\n\t\"CAGCAC\",\r\n\t\"TTATGT\",\r\n\t\"AGAAGG\",\r\n\t\"CCGCTA\",\r\n\t\"TCACTG\"]\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "No Mutante 2",
+			"request": {
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/mutant",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"dna\":[\r\n\t\"TTCTGA\",\r\n\t\"CAGTGC\",\r\n\t\"TTATGT\",\r\n\t\"AGGAGG\",\r\n\t\"CCACTA\",\r\n\t\"TCGGTG\"\r\n\t]\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "No Mutante 3",
+			"request": {
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/mutant",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"dna\":[\r\n\t\"TGCTGA\",\r\n\t\"CAGTCC\",\r\n\t\"TCATGT\",\r\n\t\"TTTAGG\",\r\n\t\"ACACGA\",\r\n\t\"TGGGTG\"]\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ADN Nulo",
+			"request": {
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/mutant",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"dna\":\r\n\tnull\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "AND Vacio",
+			"request": {
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/mutant",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"dna\":\r\n\t[]\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ADN Items iguales",
+			"request": {
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/mutant",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"dna\":[\r\n\t\"TTTAG\",\r\n\t\"TTTAG\",\r\n\t\"TCCTC\",\r\n\t\"TTTAG\",\r\n\t\"CCCCA\"]\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ADN Longitudes diferentes",
+			"request": {
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/mutant",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"dna\":[\r\n\t\"ATG\", \r\n\t\"GTGC\", \r\n\t\"TTATGT\", \r\n\t\"CCCCTA\", \r\n\t\"TCAA\"]\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ADN longitud < permitido",
+			"request": {
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/mutant",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"dna\":[\r\n\t\"CCC\", \r\n\t\"CAG\", \r\n\t\"TTA\"\r\n\t]\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ADN Con letras no permitidas",
+			"request": {
+				"url": "http://xmenadn-env.eba-sj6s3kmt.us-east-1.elasticbeanstalk.com/mutant/mutant",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"dna\":[\r\n\t\"ABCCGA\", \r\n\t\"BBBCGB\", \r\n\t\"TTATGT\", \r\n\t\"AGAAGG\", \r\n\t\"CCJCTM\", \r\n\t\"TCMCTG\"]\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,11 @@
+rootProject.name = 'xmen-adn'
+
+include ':comando',
+		':comando:comando-infraestructura',
+		':comando:comando-aplicacion',
+		':comando:comando-dominio'
+
+include ':consulta',
+		':consulta:consulta-infraestructura',
+		':consulta:consulta-aplicacion',
+		':consulta:consulta-dominio'

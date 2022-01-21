@@ -1,0 +1,8 @@
+dependencies {
+	implementation project(':comando:comando-dominio')
+
+	api project.ext.springtxt
+
+	compileOnly project.ext.lombok
+	annotationProcessor project.ext.lombok
+}

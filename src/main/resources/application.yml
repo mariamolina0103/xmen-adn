@@ -1,0 +1,16 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /mutant
+
+amazon:
+  dynamodb:
+    endpoint: https://dynamodb.us-west-2.amazonaws.com
+  aws:
+    accesskey: AKIAXYEYWNTA5RSP4LNR
+    secretkey: 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
+
+cloud:
+  aws:
+    region:
+      static: us-east-2

@@ -1,0 +1,93 @@
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'jacoco'
+
+group = 'com.xmen'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+allprojects {
+
+    repositories {
+        mavenCentral()
+    }
+
+    project.ext.springboottest = ["org.springframework.boot:spring-boot-starter-test:${springBootVersion}"]
+    project.ext.springbootweb = ["org.springframework.boot:spring-boot-starter-web:${springBootVersion}"]
+    project.ext.springbootundertow = ["org.springframework.boot:spring-boot-starter-undertow:${springBootVersion}"]
+    project.ext.springdevtools = ["org.springframework.boot:spring-boot-devtools:${springBootVersion}"]
+    project.ext.springtxt = [
+            "org.springframework:spring-tx:${springVersion}",
+            "org.springframework:spring-context:${springVersion}"
+    ]
+    project.ext.dynamodb = ['com.amazonaws:aws-java-sdk-dynamodb:1.12.141']
+    project.ext.springdatadynamodb = ['com.github.derjust:spring-data-dynamodb:5.1.0']
+    project.ext.modelmapper = ['org.modelmapper:modelmapper:2.3.0']
+    project.ext.lombok = ["org.projectlombok:lombok:1.18.12"]
+    project.ext.openapi = [
+            "org.springdoc:springdoc-openapi-ui:1.4.1"
+    ]
+    project.ext.awsjdbc = ["io.awspring.cloud:spring-cloud-starter-aws-jdbc:2.3.2"]
+    project.ext.junit = ["junit:junit:4.13.2"]
+
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+dependencies {
+    implementation project.ext.springbootweb
+    implementation project.ext.springbootundertow
+    implementation project.ext.awsjdbc
+    implementation project.ext.dynamodb
+    implementation project.ext.springdatadynamodb
+
+    implementation project(':consulta:consulta-infraestructura')
+    implementation project(':comando:comando-infraestructura')
+
+    configurations {
+        runtime.exclude module: 'spring-boot-starter-tomcat'
+        compile.exclude module: 'spring-boot-starter-tomcat'
+    }
+}
+
+subprojects {
+    apply plugin: 'java-library'
+    apply plugin: 'jacoco'
+
+    test {
+        useJUnit()
+        reports.html.enabled = false
+        reports.junitXml.enabled = true
+        reports.junitXml.destination = file("$buildDir${reportTestPath}")
+    }
+}
+
+task testReport(type: TestReport) {
+    destinationDir = file("$buildDir${reportTestPath}")
+    reportOn subprojects*.test
+    dependsOn subprojects*.test
+}
+
+task generateMergedReport(type: JacocoReport) {
+    dependsOn = subprojects.test
+    additionalSourceDirs.setFrom files(subprojects.sourceSets.main.allSource.srcDirs)
+    sourceDirectories.setFrom files(subprojects.sourceSets.main.allSource.srcDirs)
+    classDirectories.setFrom files(subprojects.sourceSets.main.output)
+    executionData.setFrom project.fileTree(dir: '.', include: '**/build/jacoco/test.exec')
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.enabled true
+        html.outputLocation = layout.buildDirectory.dir(reportJacocoTestPath)
+    }
+}
+
+test.finalizedBy(testReport)
+testReport.finalizedBy(generateMergedReport)
