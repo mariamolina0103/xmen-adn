@@ -43,6 +43,7 @@ _4. Ejecutar el proyecto_
 ## Ejecutando las pruebas ⚙️
 
 _-Pruebas unitarias : JUnit4_
+
 _- Pruebas de integración: JUnit4, MockMVC_
 
 
@@ -57,5 +58,5 @@ Puedes encontrar mucho más sobre la API [Aquí](http://xmenadn-env.eba-sj6s3kmt
 
 ## Pruebas de la API📌
 
-_Se pueden utilizar las colecciones de postman que se encuentran en la ruta principal del proyecto  [Aquí](https://github.com/mariamolina0103/xmen-adn/tree/master/postman)
+Se pueden utilizar las colecciones de postman que se encuentran en la ruta principal del proyecto  [Aquí](https://github.com/mariamolina0103/xmen-adn/tree/master/postman)
   
